@@ -1,0 +1,40 @@
+---
+layout:     post
+title:      gateway-server多种获取方法测试
+subtitle:   WWDC 2018 Keynote 全记录
+date:       2018-06-05
+author:     BY
+header-img: img/post-bg-cook.jpg
+catalog: true
+tags:
+    - iOS
+---
+
+# gateway-server
+
+## 过滤器
+
+### ReadisRateLimiter
+
+### AuthorizeGlobaFilter
+
+这个过滤器是用来完成权限验证的,现在这个filter的延迟有点搞对网关的性能损耗有点大,我这里记录一下
+
+#### 压测条件
+
+- post请求,请求体124k
+- 
+
+##### 使用第一种方式
+
+![](https://tva1.sinaimg.cn/large/006y8mN6ly1g6oms25isij313k0u04cr.jpg)
+
+![](https://tva1.sinaimg.cn/large/006y8mN6ly1g6ondwdb2yj314j02lq37.jpg)
+#### 使用第二种方式
+
+![](https://tva1.sinaimg.cn/large/006y8mN6ly1g6omw8h9nlj31820s4495.jpg)
+![](https://tva1.sinaimg.cn/large/006y8mN6ly1g6onf71253j314i02it8z.jpg)
+
+第三种方式
+
+![](https://tva1.sinaimg.cn/large/006y8mN6ly1g6oo0eoi08j314b01z0sz.jpg)
