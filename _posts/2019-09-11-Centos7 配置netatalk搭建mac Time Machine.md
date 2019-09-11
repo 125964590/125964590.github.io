@@ -29,7 +29,7 @@ afp网络磁盘这个需要mac自己的网络存储硬件支持,但是如果我�
 
 Centos7上没有直接提供的rpm可以使用这里需要手动安装,手动安装有两种方式**构建rpm包**和**源码安装**
 
-1. 完成rpm包的编译
+### 完成rpm包的编译
 
 ```shell
 $ yum install mock -y
@@ -39,7 +39,7 @@ $ wget http://www003.upp.so-net.ne.jp/hat/files/netatalk-3.1.11-1.4.fc29.src.rpm
 $ mock -r /etc/mock/epel-7-x86_64.cfg --rebuild netatalk-3.1.11-1.4.fc29.src.rpm
 ```
 
-2. 安装并配置netatalk
+### 安装并配置netatalk
 
 ```shell
 $ cd /var/lib/mock/epel-7-x86_64/result
@@ -47,7 +47,7 @@ $ yum localinstall netatalk-3.1.11-1.4.el7.x86_64.rpm -y
 $ vim /etc/netatalk/afp.conf
 ```
 
-3. 修改配置文件
+### 修改配置文件
 
 ```
 [Global]
@@ -63,7 +63,7 @@ $ vim /etc/netatalk/afp.conf
  valid users = macbackup    # 指定登录的用户(需要手动创建,并且拥有上面path的读写权限)
 ```
 
-4. 创建用户,netatalk登录时需要使用
+### 创建用户,netatalk登录时需要使用
 
 ```shell
 $ useradd macbackup
@@ -71,12 +71,16 @@ $ passwd macbackup
 $ mkdir -p /home/macbackup/to/backup
 ```
 
-5. mac连接afp
-   1. 打开**finder**选择**connect server**
-      1. ![](http://ww3.sinaimg.cn/large/006y8mN6ly1g6741t71cjj30d7067glq.jpg)
-      2. 输入你配置的账号密码
-   2. 登录Time Machine就会发现新增的磁盘选择即可
-      1. ![](http://ww3.sinaimg.cn/large/006y8mN6ly1g67445hks7j30mc07qdhp.jpg)
+### mac连接afp
+
+#### 打开**finder**选择**connect server**
+
+输入你配置的账号密码
+![](http://ww3.sinaimg.cn/large/006y8mN6ly1g6741t71cjj30d7067glq.jpg)
+
+#### 登录Time Machine就会发现新增的磁盘选择即可
+
+![](http://ww3.sinaimg.cn/large/006y8mN6ly1g67445hks7j30mc07qdhp.jpg)
 
 ## 相关文档
 
