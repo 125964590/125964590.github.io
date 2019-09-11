@@ -2,7 +2,7 @@
 layout:     post
 title:      Centos7 配置netatalk搭建mac Time Machine
 subtitle:   服务器搭建
-date:       2019-09-10
+date:       2019-09-11
 author:     JBZM
 header-img: img/gateway多种获取方法测试.jpg
 catalog: true
@@ -32,7 +32,7 @@ Centos7上没有直接提供的rpm可以使用这里需要手动安装,手动安
 1. 完成rpm包的编译
 
 ```shell
-$ yum install mock
+$ yum install mock -y
 $ useradd -m mock -g mock
 $ su - mock
 $ wget http://www003.upp.so-net.ne.jp/hat/files/netatalk-3.1.11-1.4.fc29.src.rpm 
@@ -43,7 +43,7 @@ $ mock -r /etc/mock/epel-7-x86_64.cfg --rebuild netatalk-3.1.11-1.4.fc29.src.rpm
 
 ```shell
 $ cd /var/lib/mock/epel-7-x86_64/result
-$ yum localinstall netatalk-3.1.11-1.4.el7.x86_64.rpm
+$ yum localinstall netatalk-3.1.11-1.4.el7.x86_64.rpm -y
 $ vim /etc/netatalk/afp.conf
 ```
 
@@ -83,4 +83,3 @@ $ mkdir -p /home/macbackup/to/backup
 - [netatalk官方文档](http://netatalk.sourceforge.net/3.1/htmldocs/afp.conf.5.html)
 - [教程01](https://blog.51cto.com/penguintux/2318250)
 - [教程02](https://blog.csdn.net/baidu_38741636/article/details/79241638)
-- [修改用户](
