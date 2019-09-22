@@ -11,7 +11,7 @@ docker run -d --name seafile \
   -e SEAFILE_SERVER_HOSTNAME=seafile.zhengyiwoaini.top \
   -e SEAFILE_ADMIN_EMAIL=125964590@qq.com \
   -e SEAFILE_ADMIN_PASSWORD=shuaizheng1995 \
-  -v /home/seafile-data:/shared \
+  -v /data/seafile-data:/shared \
   -p 18000:80 \
   --restart always \
   seafileltd/seafile:latest

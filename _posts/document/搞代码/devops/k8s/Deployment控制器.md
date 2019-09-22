@@ -43,6 +43,7 @@ metadata:
     app: nginx
 spec:
   replicas: 3
+  
   selector:
     matchLabels:
       app: nginx
