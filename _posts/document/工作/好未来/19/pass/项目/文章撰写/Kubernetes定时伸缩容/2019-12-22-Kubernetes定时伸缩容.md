@@ -1,4 +1,17 @@
-# Kubernetes服务定时伸
+---
+layout:     post
+title:      Kubernetes服务定时伸缩
+subtitle:  配置管理
+date:       2019-12-22
+author:     JBZM
+header-img: img/log4j2-nb.png
+catalog: true
+tags:
+    - java
+    - kubernetes
+    - 系统架构
+---
+# Kubernetes服务定时伸缩
 
 [TOC]
 
