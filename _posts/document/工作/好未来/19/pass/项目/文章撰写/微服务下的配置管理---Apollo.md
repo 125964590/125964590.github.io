@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      微服务下的配置管理---Apollo
+subtitle:  配置管理
+date:       2019-10-13
+author:     JBZM
+header-img: img/log4j2-nb.png
+catalog: true
+tags:
+    - java
+    - apollo
+    - 系统架构
+---
 # 微服务下的配置管理---Apollo
 
 ## 为什么需要统一管理配置
