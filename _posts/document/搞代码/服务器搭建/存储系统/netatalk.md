@@ -69,6 +69,7 @@ $ vim /etc/netatalk/afp.conf
 $ useradd macbackup
 $ passwd macbackup
 $ mkdir -p /home/macbackup/to/backup
+$ chown -R macbackup /home-back/
 ```
 
 ### mac连接afp

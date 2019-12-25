@@ -1,17 +1,3 @@
----
-layout:     post
-title:      gateway-server多种获取方法测试
-subtitle:   gateway采坑日记
-date:       2019-09-02
-author:     JBZM
-header-img: img/gateway多种获取方法测试.jpg
-catalog: true
-tags:							
-    - gateway
-    - spring cloud
-    - paas
----
-
 # gateway多种获取body方法测试
 
 ## 过滤器

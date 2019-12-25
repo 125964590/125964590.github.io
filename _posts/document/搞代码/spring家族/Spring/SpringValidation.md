@@ -125,6 +125,7 @@ private BigDecimal wage;
 
 #### 在请求的时候进行Valid配置
 **post请求**对于post在使用@Valid的时候需要在注解后跟随@RequestBoday,如果使用url传参,使用@Valid的时候也需要使用@RequestParam
+
 ```java
 public ResponseEntity<Object> createStudent(@Valid @RequestBody Student student) {
 ```
