@@ -4,7 +4,7 @@ title:      Kubernetes服务定时伸缩
 subtitle:  配置管理
 date:       2019-12-22
 author:     JBZM
-header-img: img/log4j2-nb.png
+header-img: img/deployment-controller.png
 catalog: true
 tags:
     - java
@@ -111,10 +111,10 @@ kubectl apply -f config/crds/autoscaling_v1beta1_cronhorizontalpodautoscaler.yam
 #### 2. 安装RBAC授权
 
 ```
-# create ClusterRole 
+# create ClusterRole
 kubectl apply -f config/rbac/rbac_role.yaml
 
-# create ClusterRolebinding and ServiceAccount 
+# create ClusterRolebinding and ServiceAccount
 kubectl apply -f config/rbac/rbac_role_binding.yaml
 ```
 
@@ -127,7 +127,7 @@ kubectl apply -f config/deploy/deploy.yaml
 #### 4. 验证`kubernetes-cronhpa-controller`安装状态
 
 ```
-kubectl get deploy kubernetes-cronhpa-controller -n kube-system -o wide 
+kubectl get deploy kubernetes-cronhpa-controller -n kube-system -o wide
 
 kubernetes-cronhpa-controller git:(master)  kubectl get deploy kubernetes-cronhpa-controller -n kube-system
 NAME                            DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
@@ -146,7 +146,7 @@ Field name   | Mandatory? | Allowed values  | Allowed special characters
   Hours        | Yes        | 0-23            | * / , -
   Day of month | Yes        | 1-31            | * / , - ?
   Month        | Yes        | 1-12 or JAN-DEC | * / , -
-  Day of week  | Yes        | 0-6 or SUN-SAT  | * / , - ?    
+  Day of week  | Yes        | 0-6 or SUN-SAT  | * / , - ?
 ```
 
 但是实际的使用场景其实并不需要很多复杂的规则,过度的开放功能反而会给用户带来选择的烦恼,所以在paas平台中我们直接将其抽象成了如下的形式
